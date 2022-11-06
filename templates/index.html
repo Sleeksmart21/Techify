@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+     <div class="home-header">
+        <h1>Tech Writers</h1>
+     </div>
+     <div class="home-header1">
+        <h3>Recent Posts</h3>
+     </div>
+     <div class="post">
+     {% for post in blogs %}
+        <div class="post-content" width="200px" height="250px">
+                <h3 class="display-4 fst-italic">{{post.title}}</h3><br>
+                <p><b>Written By {{post.author}}</b></p>
+                <p>On {{post.date_posted.strftime('%B, %d, %Y')}}</p><br>
+                <p>{{post.post | truncate (10)}}</p>
+                <p>{{post.post}}</p>
+                <a href="{{url_for('read_more', id=post.id)}}"><button>Read More</button></a>
+        </div>
+     {% endfor %}
+     </div>
+{% endblock content %}

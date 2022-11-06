@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+        {% if current_user.is_authenticated %}
+        <h1>Hi {{current_user.username}} Welcome!</h1>
+        <div class="about">
+            <div class="about_me">
+                <title>Bio</title>
+                <p>My name is Chigozie Benjamin Ogbonna, the guy that has a thing for tech.</p>
+                <p>I am a web developer and a Software Engineering student at Altschool Africa.
+                   I have interest in various areas or paths in Digital Technology.
+                   I am particularly enthusiastic about Data analytics, Cybersecurity, Robotics and Automation.
+                   Of the different areas mentioned above, I have taken a peep into Analytics and Cybersecurity but hoping to go deeper later on.
+                   At the end of the day, I just want to bring solution to my world.
+                </p>
+                <q>Always remember that tech will forever be a tool for work and living,
+                     learn a tech skill and enjoy living.
+                </q>
+            </div>
+            <div class="my_skills">
+                <h4>My Skills</h4>
+                <ul>
+                    <li>Html</li>
+                    <li>CSS</li>
+                    <li>CMS</li>
+                    <li>Python</li>
+                    <li>IT Support</li>
+                    <li>Data Analytics</li>
+                </ul>
+            </div>
+            <div class="my_pics">
+                <img src="" alt="Bio Image">
+            </div>
+        </div>
+        {% else %}
+
+        <h1>Hi Welcome</h1>
+        <div class="about">
+            <div class="about_me">
+                <title>Bio</title>
+                <p>My name is Chigozie Benjamin Ogbonna, the guy that has a thing for tech.</p>
+                <p>I am a web developer and a Software Engineering student at Altschool Africa.
+                   I have interest in various areas or paths in Digital Technology.
+                   I am particularly enthusiastic about Data analytics, Cybersecurity, Robotics and Automation.
+                   Of the different areas mentioned above, I have taken a peep into Analytics and Cybersecurity but hoping
+                   At the end of the day, I just want to bring solution to my world.
+                </p>
+                <q>Always remember that tech will forever be a tool for work and living,
+                     learn a tech skill and enjoy living.
+                </q>
+            </div>
+            <div class="my_skills">
+                <h4>My Skills</h4>
+                <ul>
+                    <li>Html</li>
+                    <li>CSS</li>
+                    <li>CMS</li>
+                    <li>Python</li>
+                    <li>IT Support</li>
+                    <li>Data Analytics</li>
+                </ul>
+            </div>
+            <div class="my_pics">
+                <img src="" alt="Bio Image">
+            </div>
+        </div>
+        {% endif %}
+{% endblock content %}
