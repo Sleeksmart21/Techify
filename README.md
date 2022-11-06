@@ -6,12 +6,12 @@ Python3 Flask virtual Envrionment
 
 ## Getting Started
 ### To succesfully install and run this app, do the following:
-Install a virtual environment - pip3 install virtualenv
-Create a virtual environment - virtualenv env
-Activate virtual environment - source env/bin/activate
-Install Flask - pip3 install flask
-Install sqlalchemy - pip3 install flask-sqlalchemy
-#### Note: The version of flask and flask-sqlalchemy for this project is in the requirements.txt file
+Install a virtual environment - pip3 install virtualenv<br>
+Create a virtual environment - virtualenv env<br>
+Activate virtual environment - source env/bin/activate<br>
+Install Flask - pip3 install flask<br>
+Install sqlalchemy - pip3 install flask-sqlalchemy<br>
+#### Note: The version of flask and flask-sqlalchemy for this project is in the requirements.txt file<br>
 
 Create the database - on the terminal, run the following commands:<br>
 from app import app<br>
