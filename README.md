@@ -13,11 +13,11 @@ Install Flask - pip3 install flask
 Install sqlalchemy - pip3 install flask-sqlalchemy
 #### Note: The version of flask and flask-sqlalchemy for this project is in the requirements.txt file
 
-Create the database - on the terminal, run the following commands:
-from app import app
-from app import db, User
-with app.app_context():
-  db.create_all()
+Create the database - on the terminal, run the following commands:<br>
+from app import app<br>
+from app import db, User<br>
+with app.app_context():<br>
+  db.create_all()<br>
   
 Line 17 is the last command but before typing, press the tab key and after typing, press the enter key twice.
 
