@@ -61,9 +61,15 @@ def about():
 
 
 @app.route('/post/edit/<int:id>', methods=['POST', 'GET'])
+@login_required
 def edit(id):
     post = Blog.query.get_or_404(id)
-    # print(post.content)
+   
+    if post.author != current_user.first_name:
+        flash('You have to login to edit a Post')
+
+        return redirect(url_for('blog'))
+
     if request.method == 'POST':
         post.title = request.form.get('title')
         post.post = request.form.get('post')
@@ -137,7 +143,15 @@ def login():
 
 
 @app.route('/post', methods=['POST', 'GET'])
+@login_required
 def post():
+    if post.author != current_user.first_name:
+
+        flash('You have to login to edit a Post')
+
+    return redirect(url_for('blog'))
+
+
     if request.method == 'POST':
         title = request.form.get('title')
         content = request.form.get('post')

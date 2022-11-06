@@ -8,12 +8,12 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
 
-    <title>Login Example</title>
+    <title>Techify</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href=""><h2>Techify</h2></a>
+            <a href="{{url_for('blog')}}"><h2>Techify</h2></a>
         </div>
         <div class="nav-items">
             {% if current_user.is_authenticated %}

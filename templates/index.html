@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if current_user.is_authenticated %}
+
+   <div class="start">
      <div class="home-header">
-        <h1>Tech Writers</h1>
-     </div>
-     <div class="home-header1">
-        <h3>Recent Posts</h3>
-     </div>
+        <h4>Hi {{current_user.username}} <h2>Welcome!</h2></h4>
+        <h5>to</h5>
+        <h1><i>Tech Writers</i></h1>
+        <p>Every one has got a story of his Journey into this space, <br> I know you got yours too.</p>
+        <p>This stories wont be complete until you share yours, so make out time to share with us the experience of your <i><h2>Journey</h2></i></p>
+      </div>
+   </div>
      <div class="post">
      {% for post in blogs %}
         <div class="post-content" width="200px" height="250px">
@@ -18,4 +23,29 @@
         </div>
      {% endfor %}
      </div>
+
+     {% else %}
+
+     <div class="start">
+      <div class="home-header">
+         <h1><i>Tech Writers</i></h1>
+         <p>Every one has got a story of his Journey into this space, <br> I know you got yours too.</p>
+         <p>This stories wont be complete until you share yours, so make out time to share with us the experience of your <i><h2>Journey</h2></i>
+       </div>
+    </div>
+      <div class="post">
+      {% for post in blogs %}
+         <div class="post-content" width="200px" height="250px">
+                 <h3 class="display-4 fst-italic">{{post.title}}</h3><br>
+                 <p><b>Written By {{post.author}}</b></p>
+                 <p>On {{post.date_posted.strftime('%B, %d, %Y')}}</p><br>
+                 <p>{{post.post | truncate (10)}}</p>
+                 <p>{{post.post}}</p>
+                 <a href="{{url_for('read_more', id=post.id)}}"><button>Read More</button></a>
+         </div>
+      {% endfor %}
+      </div>
+
+      {% endif %}
+
 {% endblock content %}
