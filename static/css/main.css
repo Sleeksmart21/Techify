@@ -127,21 +127,13 @@ footer{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;    /* background-color: rgb(150, 125, 114); */
 }
 
-/* .my_skills{ */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* border: 1px solid brown; */
-    /* border-radius: 10mm; */
-/* } */
+.btn-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-/* .my_pics{ */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* border: 1px solid brown; */
-    /* border-radius: 10px; */
-/* } */
-
-.post{
+.post a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -171,13 +163,6 @@ footer{
     justify-items: center;
     color: white;
 }
-/* .home-header1{ */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* flex-direction: row; */
-    /* justify-items: center; */
-    /* color: white; */
-/* } */
 
 .container{
     background-image: url('images/techify.webp');

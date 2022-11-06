@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% if current_user.is_authenticated %}
-    <h1>{{post.title}}</h1><a href="{{url_for('delete_post', id=post.id)}}">Delete Post</a>
-    <a href="{{url_for('edit', id=post.id)}}">Update Post</a>
+    {% if post.author == current_user.first_name %}
+    <h1>{{post.title}}</h1>
     <p>By {{post.author}}</p>
     <p>On {{post.date_posted}}</p>
 
     <div class="post">
         <p>{{post.post}}</p>
+        <div class="btn-edit">
+        <a href="{{url_for('edit', id=post.id)}}">Update Post</a>
+        <a href="{{url_for('delete_post', id=post.id)}}">Delete Post</a>
+        </div>
     </div>
-
     {% else %}
 
     <h1>{{post.title}}</h1>
